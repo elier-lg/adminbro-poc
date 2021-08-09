@@ -1,0 +1,22 @@
+{
+  "name": "adminbro-poc",
+  "version": "1.0.0",
+  "description": "admin bro poc",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "author": "elier lopez",
+  "license": "ISC",
+  "dependencies": {
+    "@admin-bro/express": "^3.1.0",
+    "admin-bro": "^4.0.1",
+    "admin-bro-expressjs": "^2.1.1",
+    "express": "^4.17.1",
+    "express-formidable": "^1.2.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
