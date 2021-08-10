@@ -24,10 +24,25 @@ const Employee = sequelize.define('Employee', {
   {
     type: Sequelize.STRING,
     field: 'lastName'
-  }
-}, 
-{
-  timestamps: false
-})
+  },
+  entitlement: Sequelize.STRING,
+  isOnBench: Sequelize.BOOLEAN,
+  gender: Sequelize.STRING,
+  linkedIn: Sequelize.STRING,
+  hiringRank: Sequelize.NUMBER,
+  onBoardingStatus: Sequelize.NUMBER,
+  backGroundCheckStatus: Sequelize.NUMBER,
+  source: Sequelize.STRING,
+  leverLink: Sequelize.STRING,
+  education: Sequelize.STRING,
+  employeeType: Sequelize.STRING,
+  isBillable: Sequelize.BOOLEAN,
+  billRate: Sequelize.DECIMAL,
+  // missing relationships
+  // managerId: Sequelize.NUMBER,
+},
+  {
+    timestamps: false
+  })
 
 module.exports = Employee
