@@ -13,9 +13,15 @@ const sidebarGroups = {
     icon: 'Product'
   }
 }
-
 const options = {
-  resources: [{ resource: Employee, options: { parent: sidebarGroups.user } }],
+  resources: [{
+    resource: Employee, options: {
+      parent: sidebarGroups.user,
+      listProperties: ['firstName', 'lastName', 'entitlement'],
+      showProperties: ['firstName', 'lastName', 'entitlement'],
+      editProperties: ['firstName', 'lastName', 'entitlement']
+    }
+  }],
   rootPath: '/admin',
   branding: {
     companyName: 'FSL',
