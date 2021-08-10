@@ -6,7 +6,9 @@ const test = require('./routes/test')
 const { default: AdminBro } = require('admin-bro')
 const options = require('./routes/admin.options')
 const buildAdminRouter = require('./routes/admin.route')
-const { Pool, Client } = require('pg')
+const Employee = require('./schema/employee.entity')
+
+
 
 // // settings
 app.set('port', process.env.PORT || 8000)
@@ -21,17 +23,6 @@ app.use('/test', test)
 
 //starts the server
 const run = async () => {
-  const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'Test1',
-    password: 'admin123',
-    port: 5432,
-  })
-  pool.query(`SELECT NOW()`, (err, res) => {
-    console.log(err, res)
-  })
-
   const admin = new AdminBro(options)
   const router = buildAdminRouter(admin)
   app.use(admin.options.rootPath, router)
