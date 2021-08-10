@@ -13,7 +13,8 @@ const Employee = sequelize.define('Employee', {
   id: {
     type: Sequelize.NUMBER,
     field: 'id',
-    primaryKey: true
+    primaryKey: true,
+    autoIncrement: true
   },
   firstName: {
     type: Sequelize.STRING,
@@ -24,6 +25,9 @@ const Employee = sequelize.define('Employee', {
     type: Sequelize.STRING,
     field: 'lastName'
   }
+}, 
+{
+  timestamps: false
 })
 
 module.exports = Employee
