@@ -3,7 +3,7 @@ const Employee = require('../schema/employee.entity')
 const AdminBroSequelize = require('admin-bro-sequelizejs');
 AdminBro.registerAdapter(AdminBroSequelize)
 
-const sortedFields = ['firstName', 'lastName', 'entitlement', 'isOnBench', 'isBillable'] 
+const sortedFields = ['firstName', 'lastName', 'entitlement', 'isOnBench', 'isBillable', 'billRate'] 
 
 const sidebarGroups = {
   user: {
